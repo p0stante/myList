@@ -9,6 +9,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,6 +21,9 @@ import androidx.compose.ui.unit.sp
 import com.example.androidkotlinapp.NotesViewModel
 import com.example.androidkotlinapp.data.ListItem
 import com.example.androidkotlinapp.data.Note
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 private fun flattenForPreview(
     items: List<ListItem>,
@@ -101,6 +105,18 @@ private fun NoteCard(note: Note, onClick: () -> Unit) {
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
+            val dateText = remember(note.createdAt) {
+                SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(Date(note.createdAt))
+            }
+            Row(modifier = Modifier.fillMaxWidth()) {
+                Spacer(modifier = Modifier.weight(1f))
+                Text(
+                    text = dateText,
+                    fontSize = 11.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                )
+            }
+
             if (note.title.isNotEmpty()) {
                 Text(
                     text = note.title,

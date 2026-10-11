@@ -1,18 +1,8 @@
 # MyList
 
-<!-- Replace <your-username> below with your GitHub username once the repo is pushed. -->
-![Android CI](https://github.com/<your-username>/mylist/actions/workflows/android.yml/badge.svg)
-
 A Google Keep–style checklist app for Android, built with Kotlin and Jetpack Compose.
 Make nested to-do lists, number or bullet them, check items off in place, colour-code
 notes, and share any list as formatted text or JSON.
-
-## Screenshots
-
-<!-- Drop your images in docs/screenshots/ and they'll render here. -->
-| List overview | Editing a list | Dark mode |
-| :-----------: | :------------: | :-------: |
-| ![Notes list](docs/screenshots/list.png) | ![Editing](docs/screenshots/edit.png) | ![Dark mode](docs/screenshots/dark.png) |
 
 ## Features
 

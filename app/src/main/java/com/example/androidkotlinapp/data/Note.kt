@@ -34,5 +34,6 @@ data class Note(
     val title: String = "",
     val items: List<ListItem> = emptyList(),
     val showNumbers: Boolean = false,
-    val color: NoteColor = NoteColor.WHITE
+    val color: NoteColor = NoteColor.WHITE,
+    val createdAt: Long = System.currentTimeMillis()
 )
