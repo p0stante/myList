@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+captures/
+.cxx/
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+local.properties
+
+# Keep the Gradle wrapper (gradlew, gradlew.bat, gradle/wrapper/*) tracked.
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs & keystores
+*.log
+*.keystore
+*.jks
+
+# Claude local settings
+.claude/settings.local.json
